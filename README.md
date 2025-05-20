@@ -1,107 +1,101 @@
 # Multi-Agent Discussion System
 
-A sophisticated multi-agent discussion system that enables AI agents with different personalities, roles, and perspectives to engage in meaningful conversations on any topic.
+A powerful system for orchestrating discussions between multiple AI agents, enabling collaborative problem-solving and complex task completion.
 
 ## Features
 
-- **Dynamic Agent Generation**: Create specialized agent teams tailored to any topic
-- **Custom Agent Roles**: Create manually or auto-generate agent teams for any domain
-- **Multi-Round Discussions**: See how agents interact and debate over multiple rounds
-- **Thinking Visibility**: View each agent's internal reasoning process
-- **Save/Load Teams**: Save your favorite agent combinations for later use
-- **Project Management**: Coordinator agents can break down tasks and track progress
-- **Wikipedia Integration**: Agents can look up information during discussions
+- **Multi-Agent Coordination**: Orchestrate discussions between multiple AI agents with different roles and expertise
+- **Task Breakdown**: Automatically break down complex tasks into manageable subtasks
+- **Dynamic Team Formation**: Create and manage teams of agents based on task requirements
+- **Real-time Discussion**: Stream agent responses in real-time for interactive discussions
+- **Wikipedia Integration**: Agents can look up information from Wikipedia to enhance their knowledge
+- **State Management**: Robust state management for tracking discussions and agent configurations
+- **Modern UI**: Clean and intuitive Streamlit-based user interface
 
-## Requirements
-
-- Python 3.8+
-- Ollama running locally at http://localhost:11434
-- At least one model available in Ollama (e.g., llama3:latest)
-
-## Installation
+## Quick Start
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/Mi7.git
+git clone https://github.com/cptntrps/Mi7.git
 cd Mi7
 ```
 
-2. Create and activate a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-
-1. Start the Streamlit app:
+3. Run the application:
 ```bash
 streamlit run agent_discussion_app.py
 ```
 
-2. Access the app in your browser at http://localhost:8501
+4. Open your browser and navigate to `http://localhost:8501`
 
-3. Create agents in the sidebar with different roles and personalities, or use the Auto-Generate Task Force feature
+## Prerequisites
 
-4. Enter a discussion topic and set the number of discussion rounds
+- Python 3.8+
+- Ollama server running locally (default: http://localhost:11434)
+- Internet connection for Wikipedia lookups
 
-5. Click "Run Discussion" to start the conversation
+## Documentation
+
+- [User Guide](docs/user_guide.md) - How to use the system
+- [Technical Documentation](docs/technical.md) - System architecture and implementation details
+- [Development Guide](docs/development.md) - Contributing and development workflow
+
+## Example Usage
+
+1. Create a task force:
+   - Add a coordinator agent
+   - Add specialist agents based on task requirements
+   - Configure agent roles and capabilities
+
+2. Start a discussion:
+   - Input your task or question
+   - Watch agents collaborate in real-time
+   - Review and iterate on the solutions
+
+3. Manage discussions:
+   - Track conversation history
+   - Export discussion results
+   - Save and load agent configurations
 
 ## Project Structure
 
-- `ma_discussion/`: Main package directory
-  - `agents/`: Agent implementations
-  - `services/`: External service integrations (Ollama, Wikipedia)
-  - `ui/`: Streamlit UI components
-  - `utils/`: Utility functions
-- `tests/`: Test files
-- `agent_discussion_app.py`: Main application entry point
+```
+Mi7/
+├── docs/                    # Documentation
+├── ma_discussion/          # Main package
+│   ├── agents/            # Agent implementations
+│   ├── services/         # External services
+│   ├── ui/              # User interface
+│   ├── utils/           # Utilities
+│   └── tests/           # Test files
+├── agent_discussion_app.py  # Main entry point
+├── requirements.txt         # Dependencies
+└── pyproject.toml          # Project configuration
+```
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+We welcome contributions! Please see our [Development Guide](docs/development.md) for details on:
+- Setting up your development environment
+- Our coding standards
+- The development workflow
+- How to submit pull requests
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Example Agents
+## Support
 
-Here are some example agent configurations you might want to try:
-
-1. **Skeptic**
-   - Role: Critical Thinker
-   - Personality: Questions assumptions, requires evidence, finds flaws in arguments
-
-2. **Optimist**
-   - Role: Possibility Thinker  
-   - Personality: Focuses on opportunities, creative solutions, and positive outcomes
-
-3. **Devil's Advocate**
-   - Role: Challenger
-   - Personality: Takes opposing viewpoints to test the strength of arguments
-
-4. **Coordinator**
-   - Role: Discussion Leader
-   - Personality: Guides conversation, summarizes points, helps reach conclusions
-
-## Tips
-
-- For complex topics, use 3-5 rounds of discussion
-- Include a variety of perspectives for richer discussions
-- The coordinator agent is optional but helpful for summarizing
-- Experiment with different personality combinations
+- [Issue Tracker](https://github.com/cptntrps/Mi7/issues)
+- [Documentation](docs/)
 
 ## Acknowledgments
 
-- Based on a collaborative agent framework for document classification
-- Uses Ollama for local LLM inference 
+- Built with [Streamlit](https://streamlit.io/)
+- Powered by [Ollama](https://ollama.ai/)
+- Wikipedia integration via [Wikipedia-API](https://wikipedia-api.readthedocs.io/) 
